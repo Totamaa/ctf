@@ -1,0 +1,48 @@
+site_name: CTF Write-Ups
+site_url: https://ctf.totama.fr
+repo_url: https://github.com/Totamaa/ctf 
+repo_name: GitHub
+
+theme:
+  name: material
+  palette:
+    # Mode sombre par défaut (Slate)
+    - scheme: slate
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Mode clair (si l'utilisateur switch)
+    - scheme: default
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - content.code.copy
+    - navigation.expand
+
+# Extensions Markdown (Le coeur du réacteur)
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  # Configuration pour MERMAID
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # Configuration pour LATEX / MATHS
+  - pymdownx.arithmatex:
+      generic: true
+
+# Scripts pour le rendu des Maths
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
