@@ -5,6 +5,7 @@ repo_name: GitHub
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     # Mode sombre par défaut (Slate)
     - scheme: slate
